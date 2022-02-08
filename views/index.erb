@@ -6,9 +6,22 @@
     <title>Count</title>
   </head>
   <body>
+    <h2>Count</h2>
+    <style>
+    body { background: green; color: white; }
+    </style>
     <form action="/increment" method="post">
-      <input type="submit" value="Increment">
+      <input type="submit" value="   + 1  ">
     </form>
-    <div id="count"><%= @counter.count %></div>
+    <form action="/decrement" method="post">
+      <input type="submit" value="   - 1   ">
+    </form>
+      <div id="count"><%= @counter.count %></div>
+    </form>
+      <form action="/reset" method="post">
+      <input type="submit" value="Reset">
+    </form>
+      <div id="update"><%= @counter.update %></div>
+    </form>
   </body>
 </html>
